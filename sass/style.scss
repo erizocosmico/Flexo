@@ -1,0 +1,44 @@
+$purple: rgb(70, 23, 180);
+
+body {
+    padding: 40px;
+    background: darken(white, 10%);
+    margin: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    color: white;
+    
+    h1 {
+        font-weight: 300;
+        font-size: 4.2em;
+        padding: 20px 0;
+        margin: 0;
+        text-align: center;
+        color: $purple;
+    }
+    
+    h2 {
+        font-weight: 300;
+        color: lighten(black, 30%);
+        text-align: center;
+        font-size: 2.0em;
+        margin: 0;
+        padding: 0;
+    }
+    
+    @for $i from 1 to 11 {
+        .box-color-#{$i} {
+            background-color: lighten($purple, $i*4%);
+        }
+    }
+    
+    .flexo {
+        margin-top: 40px;
+    }
+    
+    .box:not(.stack) {
+        font-weight: 300;
+        text-align: center;
+        vertical-align: middle;
+        padding: 20px;
+    }
+}

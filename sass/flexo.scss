@@ -1,0 +1,31 @@
+.flexo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    
+    .row {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .box {
+            flex-grow: 1;
+
+            &.stack {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+        }
+    }
+    
+    @for $i from 1 to 11 {
+        .grow-#{$i} {
+            flex-grow: $i !important;
+        }
+    }
+}
